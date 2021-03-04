@@ -2,8 +2,8 @@
 
 ## Links
 
-<!-- - [Pull request]()
-- [Deployed site]()
+- [Pull request](https://github.com/dcalhoun286/api-server/pull/1)
+<!-- - [Deployed site]()
 - [GitHub Actions]() -->
 
 ## The Setup
