@@ -17,6 +17,10 @@ const logger = require('./middleware/logger.js');
 const dogsRoutes = require('./routes/dogs.js');
 const clothesRoutes = require('./routes/clothes.js');
 
+// internal constants
+
+const PORT = process.env.PORT || 3333;
+
 // Express Global Middleware
 
 app.use(express.json());
@@ -56,5 +60,6 @@ const start = (port) => {
 
 module.exports = {
   server: app,
+  PORT: PORT,
   start: start,
 };
