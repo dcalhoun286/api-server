@@ -8,6 +8,7 @@ const app = express();
 
 // internal modules
 
+const notFoundHandler = require('./error-handlers/404.js');
 const logger = require('./middleware/logger.js');
 
 // Router modules
@@ -36,6 +37,10 @@ function getHomePage(req, res) {
 
   res.status(200).json(outputObj);
 }
+
+// error handling middleware
+
+app.use('*', notFoundHandler);
 
 const start = (port) => {
   if (!port) { throw new Error ('Missing Port');}
