@@ -6,6 +6,10 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 
+// internal modules
+
+const logger = require('./middleware/logger.js');
+
 // Router modules
 
 const dogsRoutes = require('./routes/dogs.js');
@@ -16,6 +20,8 @@ const clothesRoutes = require('./routes/clothes.js');
 app.use(express.json());
 
 // Our own Global Middleware
+
+app.use(logger);
 
 // use the routes from the routing module
 app.use(dogsRoutes);
