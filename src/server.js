@@ -9,6 +9,7 @@ const app = express();
 // internal modules
 
 const notFoundHandler = require('./error-handlers/404.js');
+const errorHandler = require('./error-handlers/500.js');
 const logger = require('./middleware/logger.js');
 
 // Router modules
@@ -38,9 +39,15 @@ function getHomePage(req, res) {
   res.status(200).json(outputObj);
 }
 
+// testing status 500 error handler
+app.get('/bad', (req, res, next) => {
+  throw new Error('Intentional to test 500 error handler');
+});
+
 // error handling middleware
 
 app.use('*', notFoundHandler);
+app.use(errorHandler);
 
 const start = (port) => {
   if (!port) { throw new Error ('Missing Port');}
