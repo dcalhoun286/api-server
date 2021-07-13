@@ -64,3 +64,7 @@ Once your dev run has completed, you have successfully deployed your application
 1. When that process completes, open your app in the browser to prove it.
 
 ## Resources and Documentation
+
+- Tutor: Vinizio Sanchez
+- Testing an Express middleware with jest: [Stack Overflow](https://stackoverflow.com/questions/60722281/testing-an-express-middleware-with-jest
+- )
