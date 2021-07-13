@@ -3,8 +3,8 @@
 ## Links
 
 - [Pull request](https://github.com/dcalhoun286/api-server/pull/1)
-- [Deployed site]()
-- [GitHub Actions]()
+- [Deployed site](https://dc-api-server.herokuapp.com)
+- [GitHub Actions](https://github.com/dcalhoun286/api-server/actions)
 
 ## The Setup
 
@@ -27,6 +27,7 @@
   1. Choose the "main" branch
   1. Choose the "Wait for CI to pass before deploy" option
   1. Choose the "enable automatic deploys" option
+1. Configure a cloud database connection using the directions at [this link](https://developer.mongodb.com/how-to/use-atlas-on-heroku/)
 
 ### The Code
 
@@ -63,8 +64,12 @@ Once your dev run has completed, you have successfully deployed your application
 1. Once the tests pass, Heroku will deploy your "main" branch to your app!
 1. When that process completes, open your app in the browser to prove it.
 
+## UML
+
+![uml](./assets/uml.drawio.png)
+
 ## Resources and Documentation
 
 - Tutor: Vinizio Sanchez
 - Testing an Express middleware with jest: [Stack Overflow](https://stackoverflow.com/questions/60722281/testing-an-express-middleware-with-jest
-- )
+- Setting up MongoDB for deployment on Heroku: [developer.mongodb.com](https://developer.mongodb.com/how-to/use-atlas-on-heroku/)
