@@ -1,23 +1,25 @@
 'use strict';
 
-// "wrapper" for our CRUD actions against the DB
-class Data {
-  constructor(model) {
+const model = require('./dogsModel.js');
+
+class DogsCollection {
+
+  constructor() {
     this.model = model;
-    this.db = [];
   }
 
   get(_id) {
-    if (_id) {
-      return this.model.findOne({ _id });
-    } else {
-      return this.model.find({});
-    }
+    return _id ? this.model.findOne({ _id }) : this.model.find({});
   }
 
   create(record) {
     let newRecord = new this.model(record);
-    return newRecord.save();
+
+    try {
+      newRecord.save();
+    } catch {
+      res.status();
+    }
   }
 
   update(_id, record) {
@@ -29,4 +31,4 @@ class Data {
   }
 }
 
-module.exports = Data;
+module.exports = DogsCollection;

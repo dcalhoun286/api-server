@@ -3,17 +3,17 @@
 const express = require('express');
 const clothesRouter = express.Router();
 const validator = require('../middleware/validator.js');
-const clothesCollection = require('../models/data-collection.js');
+const clothesCollection = require('../models/clothes-collection.js');
 const clothesModel = require('../models/clothesModel.js');
 const clothes = new clothesCollection(clothesModel);
 
 // routes
 
 clothesRouter.get('/clothes', getClothes);
-clothesRouter.get('/clothes/:id', getOneClothingItem);
+clothesRouter.get('/clothes/:id', validator, getOneClothingItem);
 clothesRouter.post('/clothes', createClothingItem);
-clothesRouter.put('/clothes/:id', updateClothingItem);
-clothesRouter.delete('/clothes/:id', deleteClothingItem);
+clothesRouter.put('/clothes/:id', validator, updateClothingItem);
+clothesRouter.delete('/clothes/:id', validator, deleteClothingItem);
 
 // route callbacks
 
