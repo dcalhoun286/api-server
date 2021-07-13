@@ -10,10 +10,10 @@ const dogs = new dogsCollection(dogsModel);
 // routes
 
 dogsRouter.get('/dogs', getDogs);
-dogsRouter.get('/dogs/:id', getOneDogItem);
+dogsRouter.get('/dogs/:id', validator, getOneDogItem);
 dogsRouter.post('/dogs', createDogItem);
-dogsRouter.put('/dogs/:id', updateDogItem);
-dogsRouter.delete('/dogs/:id', deleteDogItem);
+dogsRouter.put('/dogs/:id', validator, updateDogItem);
+dogsRouter.delete('/dogs/:id', validator, deleteDogItem);
 
 // route callbacks
 
