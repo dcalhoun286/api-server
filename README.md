@@ -73,3 +73,5 @@ Once your dev run has completed, you have successfully deployed your application
 - Tutor: Vinizio Sanchez
 - Testing an Express middleware with jest: [Stack Overflow](https://stackoverflow.com/questions/60722281/testing-an-express-middleware-with-jest
 - Setting up MongoDB for deployment on Heroku: [developer.mongodb.com](https://developer.mongodb.com/how-to/use-atlas-on-heroku/)
+- Terminating mongoose connection when unit tests are complete: [Stack Overflow](https://stackoverflow.com/questions/50687592/jest-and-mongoose-jest-has-detected-opened-handles)
+- Setting up unit tests with mongoose: [plainenglish.io](https://javascript.plainenglish.io/how-i-setup-unit-test-for-mongodb-using-jest-mongoose-103b772ee164)
