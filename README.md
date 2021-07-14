@@ -1,5 +1,11 @@
 # Lab: Data Modeling
 
+This is a simple back-end application that can perform CRUD operations on a MongoDB Database, using the REST standard.
+
+## Author
+
+Dar-Ci Calhoun
+
 ## Links
 
 - [Pull request](https://github.com/dcalhoun286/api-server/pull/1)
